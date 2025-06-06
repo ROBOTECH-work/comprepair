@@ -11,6 +11,6 @@ RUN rm -rf ./*
 COPY . .
 
 # Expose port for Coolify to bind to
-EXPOSE 80
+EXPOSE 8080
 
 # No need for CMD – nginx default handles it
