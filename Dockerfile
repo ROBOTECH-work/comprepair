@@ -1,14 +1,16 @@
-# Use Python lightweight image
-FROM python:3.9-alpine
+# Use a lightweight nginx image
+FROM nginx:alpine
 
-# Set working directory to root (since files are directly in root)
-WORKDIR /
+# Set working directory
+WORKDIR /usr/share/nginx/html
 
-# Copy all files (index.html, etc.) to the root directory
-COPY . /
+# Clean the default web files
+RUN rm -rf ./*
 
-# Expose port 8003
-EXPOSE 8003
+# Copy all project files into the web server root
+COPY . .
 
-# Run Python HTTP server on port 8003
-CMD ["python", "-m", "http.server", "8003"]
+# Expose port for Coolify to bind to
+EXPOSE 9000
+
+# No need for CMD – nginx default handles it
