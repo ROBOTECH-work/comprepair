@@ -161,36 +161,19 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
-<script>
-// Create container div
-const whatsappDiv = document.createElement("div");
-whatsappDiv.id = "whatsapp-button";
-whatsappDiv.style.position = "fixed";
-whatsappDiv.style.bottom = "20px";
-whatsappDiv.style.left = "20px";
-whatsappDiv.style.zIndex = "1000";
-
-// Create anchor link
-const link = document.createElement("a");
-link.href = "https://wa.me/254727255113";
-link.target = "_blank";
-link.title = "Chat on WhatsApp";
-
-// Create image
-const img = document.createElement("img");
-img.src = "https://cdn-icons-png.flaticon.com/512/733/733585.png";
-img.alt = "WhatsApp";
-img.style.width = "55px";
-img.style.height = "55px";
-img.style.borderRadius = "50%";
-img.style.boxShadow = "2px 2px 8px rgba(0,0,0,0.3)";
-
-// Append everything
-link.appendChild(img);
-whatsappDiv.appendChild(link);
-document.body.appendChild(whatsappDiv);
+<script type="text/javascript">
+  (function () {
+    var options = {
+      whatsapp: "254727255113", // Replace with your actual WhatsApp number
+      call_to_action: "Chat with us", // Text displayed on the button
+      position: "left", 
+    };
+    var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
 </script>
-
 
 <body>
 

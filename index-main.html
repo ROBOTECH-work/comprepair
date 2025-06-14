@@ -148,20 +148,19 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
-<script>
-// Create container div
-const whatsappDiv = document.createElement("div");
-whatsappDiv.id = "whatsapp-button";
-whatsappDiv.style.position = "fixed";
-whatsappDiv.style.bottom = "20px";
-whatsappDiv.style.left = "20px";
-whatsappDiv.style.zIndex = "1000";
-
-// Create anchor link
-const link = document.createElement("a");
-link.href = "https://wa.me/254727255113";
-link.target = "_blank";
-link.title = "Chat on WhatsApp";
+<script type="text/javascript">
+  (function () {
+    var options = {
+      whatsapp: "254727255113", // Replace with your actual WhatsApp number
+      call_to_action: "Chat with us", // Text displayed on the button
+      position: "left", 
+    };
+    var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
 
 // Create image
 const img = document.createElement("img");
