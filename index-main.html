@@ -1,346 +1,361 @@
-# TechFix Pro - Computer Repair & Electronics Store
 
-Here's how to adapt the Silicon template for a computer repair and electronics sales business:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>TechFix Pro | Computer Repair & Electronics Store</title>
 
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="Professional computer repair services and quality electronics at TechFix Pro. We fix laptops, desktops, phones and sell accessories.">
-    <meta name="keywords" content="computer repair, laptop repair, phone repair, electronics store, tech support, hardware repair, software troubleshooting">
-    <meta name="author" content="TechFix Pro">
+<head>
+  <meta charset="utf-8">
+  <title>Computer Repair & Electronics Store</title>
 
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO Meta Tags-->
+  <meta name="description"
+    content="Professional computer repair services and quality electronics at TechFix Pro. We fix laptops, desktops, phones and sell accessories.">
+  <meta name="keywords"
+    content="computer repair, laptop repair, phone repair, electronics store, tech support, hardware repair, software troubleshooting">
+  <meta name="author" content="TechFix Pro">
 
-    <!-- Favicon and Touch Icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
 
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .dark-mode .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      .dark-mode .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
-    <!-- Theme mode -->
-    <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .dark-mode .page-loading {
+      background-color: #0b0f19;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #9397ad;
+    }
+
+    .dark-mode .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #b4b7c9;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    .dark-mode .page-spinner {
+      border-color: rgba(255, 255, 255, .4);
+      border-right-color: transparent;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
       }
-    </script>
+    }
 
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
-  <!-- Body -->
-  <body>
-    <!-- Page wrapper for sticky footer -->
-    <main class="page-wrapper">
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/techfix-logo.svg" width="47" alt="TechFix Pro">
-            TechFix Pro
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="computer-repair.html" class="dropdown-item">Computer Repair</a></li>
-                    <li><a href="laptop-repair.html" class="dropdown-item">Laptop Repair</a></li>
-                    <li><a href="phone-repair.html" class="dropdown-item">Phone Repair</a></li>
-                    <li><a href="data-recovery.html" class="dropdown-item">Data Recovery</a></li>
-                    <li><a href="virus-removal.html" class="dropdown-item">Virus Removal</a></li>
-                    <li><a href="maintenance-plans.html" class="dropdown-item">Maintenance Plans</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="shop.html" class="nav-link">Shop</a>
-                </li>
-                <li class="nav-item">
-                  <a href="about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div class="offcanvas-header border-top">
-              <a href="contact.html" class="btn btn-primary w-100">
-                <i class="bx bx-calendar fs-4 lh-1 me-1"></i>
-                &nbsp;Book a Repair
-              </a>
-            </div>      
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+      root = document.getElementsByTagName('html')[0];
+    if (mode !== null && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1000);
+      };
+    })();
+  </script>
+</head>
+
+<!-- Body -->
+
+<body>
+  <!-- Page wrapper for sticky footer -->
+  <main class="page-wrapper">
+    <!-- Navbar -->
+    <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+      <div class="container px-3">
+        <a href="index.html" class="navbar-brand pe-3">
+          <img src="assets/img/techfix-logo.svg" width="47" alt="TechFix Pro">
+          Computer Dock
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a href="computer-repair.html" class="dropdown-item">Computer Repair</a></li>
+                  <li><a href="laptop-repair.html" class="dropdown-item">Laptop Repair</a></li>
+                  <li><a href="phone-repair.html" class="dropdown-item">Phone Repair</a></li>
+                  <li><a href="data-recovery.html" class="dropdown-item">Data Recovery</a></li>
+                  <li><a href="virus-removal.html" class="dropdown-item">Virus Removal</a></li>
+                  <li><a href="maintenance-plans.html" class="dropdown-item">Maintenance Plans</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
           </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a href="contact.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
-            <i class="bx bx-phone fs-5 lh-1 me-1"></i>
-            &nbsp;Call Now
-          </a>
-        </div>
-      </header>
-
-      <!-- Hero -->
-      <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden" style="background-image: url(assets/img/tech-repair/hero-bg.jpg);">
-        <div class="container vh-100">
-          <div class="row flex-nowrap vh-100">
-            <div class="col-lg-6 col-md-7 d-flex flex-column text-center text-md-start py-5">
-              <h1 class="display-3 mt-auto mb-4">Expert Tech Repairs & Electronics</h1>
-              <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">Fast, reliable repairs for all your devices plus quality electronics at competitive prices.</p>
-              <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mb-md-4 mb-lg-5 mt-auto">
-                <a href="services.html" class="btn btn-primary btn-lg">Our Services</a>
-                <a href="contact.html" class="btn btn-outline-light btn-lg">Book a Repair</a>
-              </div>
-              <div class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5">
-                <div class="btn btn-icon btn-secondary rounded-circle">
-                  <i class="bx bx-chevron-down"></i>
-                </div>
-                <a href="#services" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll data-scroll-offset="70">View Services</a>
-              </div>
-            </div>
-            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
-              <img src="assets/img/tech-repair/hero-devices.png" class="img-fluid" alt="Devices we repair">
-            </div>
+          <div class="offcanvas-header border-top">
+            <a href="contact.html" class="btn btn-primary w-100">
+              <i class="bx bx-calendar fs-4 lh-1 me-1"></i>
+              &nbsp;Book a Repair
+            </a>
           </div>
         </div>
-      </section>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+          <i class="bx bx-phone fs-5 lh-1 me-1"></i>
+          &nbsp;Call Now
+        </a>
+      </div>
+    </header>
 
-      <!-- Services -->
-      <section id="services" class="container pt-5 pb-4 pb-lg-5">
-        <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">Our Repair Services</h2>
-        <p class="fs-lg text-center pb-3 pb-md-4 mb-4 mb-lg-5">Professional solutions for all your tech problems</p>
-        
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <!-- Computer Repair -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-desktop fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Computer Repair</h3>
-                <p class="mb-0">Diagnosis and repair of desktops, hardware upgrades, and performance optimization.</p>
+    <!-- Hero -->
+    <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
+      style="background-image: url(assets/img/tech-repair/hero-bg.jpg);">
+      <div class="container vh-100">
+        <div class="row flex-nowrap vh-100">
+          <div class="col-lg-6 col-md-7 d-flex flex-column text-center text-md-start py-5">
+            <h1 class="display-3 mt-auto mb-4">Expert Tech Repairs & Electronics</h1>
+            <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">Fast, reliable repairs for all your devices plus
+              quality electronics at competitive prices.</p>
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mb-md-4 mb-lg-5 mt-auto">
+              <a href="services.html" class="btn btn-primary btn-lg">Our Services</a>
+              <a href="contact.html" class="btn btn-outline-light btn-lg">Book a Repair</a>
+            </div>
+            <div
+              class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5">
+              <div class="btn btn-icon btn-secondary rounded-circle">
+                <i class="bx bx-chevron-down"></i>
               </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="computer-repair.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
+              <a href="#services" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll
+                data-scroll-offset="70">View Services</a>
             </div>
           </div>
-          
-          <!-- Laptop Repair -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-laptop fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Laptop Repair</h3>
-                <p class="mb-0">Screen replacements, keyboard fixes, battery issues, and motherboard repairs.</p>
-              </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="laptop-repair.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
+          <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+            <img src="assets/img/tech-repair/hero-devices.png" class="img-fluid" alt="Devices we repair">
           </div>
-          
-          <!-- Phone Repair -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-mobile-alt fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Phone Repair</h3>
-                <p class="mb-0">Screen replacements, battery changes, water damage repair, and more.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="container pt-5 pb-4 pb-lg-5">
+      <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">Our Repair Services</h2>
+      <p class="fs-lg text-center pb-3 pb-md-4 mb-4 mb-lg-5">Professional solutions for all your tech problems</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Computer Repair -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-desktop fs-1 text-primary"></i>
               </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="phone-repair.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
+              <h3 class="h5 mb-2">Computer Repair</h3>
+              <p class="mb-0">Diagnosis and repair of desktops, hardware upgrades, and performance optimization.</p>
             </div>
-          </div>
-          
-          <!-- Data Recovery -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-hdd fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Data Recovery</h3>
-                <p class="mb-0">Recover lost files from damaged or corrupted hard drives and storage devices.</p>
-              </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="data-recovery.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Virus Removal -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-shield-quarter fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Virus Removal</h3>
-                <p class="mb-0">Malware and virus removal with complete system cleanup and protection.</p>
-              </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="virus-removal.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Maintenance Plans -->
-          <div class="col">
-            <div class="card card-hover h-100 border-0 shadow-sm">
-              <div class="card-body text-center">
-                <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
-                  <i class="bx bx-cog fs-1 text-primary"></i>
-                </div>
-                <h3 class="h5 mb-2">Maintenance Plans</h3>
-                <p class="mb-0">Regular checkups to keep your devices running smoothly and prevent issues.</p>
-              </div>
-              <div class="card-footer border-0 pt-0 pb-4 text-center">
-                <a href="maintenance-plans.html" class="btn btn-outline-primary">Learn More</a>
-              </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="computer-repair.html" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Featured Products -->
-      <section class="container pt-2 pt-md-4 pt-lg-5 pb-5">
-        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
-          <h2 class="h1 mb-0">Featured Electronics</h2>
-          <a href="shop.html" class="btn btn-outline-primary">View All Products</a>
+        <!-- Laptop Repair -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-laptop fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-2">Laptop Repair</h3>
+              <p class="mb-0">Screen replacements, keyboard fixes, battery issues, and motherboard repairs.</p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="laptop-repair.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
         </div>
-        
-        <div class="swiper" data-swiper-options='{
+
+        <!-- Phone Repair -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-mobile-alt fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-2">Phone Repair</h3>
+              <p class="mb-0">Screen replacements, battery changes, water damage repair, and more.</p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="phone-repair.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Recovery -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-hdd fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-2">Data Recovery</h3>
+              <p class="mb-0">Recover lost files from damaged or corrupted hard drives and storage devices.</p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="data-recovery.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Virus Removal -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-shield-quarter fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-2">Virus Removal</h3>
+              <p class="mb-0">Malware and virus removal with complete system cleanup and protection.</p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="virus-removal.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maintenance Plans -->
+        <div class="col">
+          <div class="card card-hover h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="bg-primary bg-opacity-10 rounded-3 w-auto lh-1 p-3 mx-auto mb-4">
+                <i class="bx bx-cog fs-1 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-2">Maintenance Plans</h3>
+              <p class="mb-0">Regular checkups to keep your devices running smoothly and prevent issues.</p>
+            </div>
+            <div class="card-footer border-0 pt-0 pb-4 text-center">
+              <a href="maintenance-plans.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container pt-2 pt-md-4 pt-lg-5 pb-5">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <h2 class="h1 mb-0">Featured Electronics</h2>
+        <a href="shop.html" class="btn btn-outline-primary">View All Products</a>
+      </div>
+
+      <div class="swiper" data-swiper-options='{
           "slidesPerView": 1,
           "spaceBetween": 16,
           "pagination": {
@@ -359,16 +374,17 @@ Here's how to adapt the Silicon template for a computer repair and electronics s
             }
           }
         }'>
-          <div class="swiper-wrapper pb-4">
-            
-            <!-- Product 1 -->
-            <div class="swiper-slide h-auto">
-              <div class="card card-product card-hover h-100 border-0 shadow-sm">
-                <div class="card-img-top position-relative overflow-hidden">
-                  <img src="assets/img/shop/products/laptop-01.jpg" class="d-block mx-auto" width="220" alt="Product image">
-                  <div class="position-absolute top-0 end-0 pt-3 pe-3 zindex-5">
-                    <button type="button" class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm">
-                      <i class="bx bx-heart"></i>
-                    </button>
-                  </div>
-                </div
+        <div class="swiper-wrapper pb-4">
+
+          <!-- Product 1 -->
+          <div class="swiper-slide h-auto">
+            <div class="card card-product card-hover h-100 border-0 shadow-sm">
+              <div class="card-img-top position-relative overflow-hidden">
+                <img src="assets/img/shop/products/laptop-01.jpg" class="d-block mx-auto" width="220"
+                  alt="Product image">
+                <div class="position-absolute top-0 end-0 pt-3 pe-3 zindex-5">
+                  <button type="button" class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm">
+                    <i class="bx bx-heart"></i>
+                  </button>
+                </div>
+              </div
